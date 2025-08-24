@@ -31,8 +31,19 @@ pipeline {
     }
 
     stage('kafka check') {
-      steps {
-        echo 'final'
+      parallel {
+        stage('kafka check') {
+          steps {
+            echo 'final'
+          }
+        }
+
+        stage('test') {
+          steps {
+            echo 'hi again'
+          }
+        }
+
       }
     }
 

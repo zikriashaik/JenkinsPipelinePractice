@@ -47,5 +47,12 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        echo 'CB CDR'
+        echo 'CCB CDR'
+      }
+    }
+
   }
 }
